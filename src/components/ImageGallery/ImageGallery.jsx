@@ -18,7 +18,7 @@ export class ImageGallery extends Component {
   };
 
   render() {
-    const listOfImages = this.props.listOfImages;
+    const { listOfImages } = this.props;
     return (
       <>
         <ul className={css.ImageGallery}>
