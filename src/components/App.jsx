@@ -92,7 +92,7 @@ class App extends Component {
   };
 
   render() {
-    const { imgList, inputValue, loading, totalPage, errorMessage } =
+    const { imgList, inputValue, page, loading, totalPage, errorMessage } =
       this.state;
     return (
       <>
@@ -100,7 +100,7 @@ class App extends Component {
         {errorMessage && <div>{errorMessage}</div>}
         {imgList && inputValue && <ImageGallery listOfImages={imgList} />}
         {loading && <Loader />}
-        {totalPage > 1 && inputValue && (
+        {totalPage > page && inputValue && (
           <LoadMore onClick={this.handleLoadMore} />
         )}
       </>
