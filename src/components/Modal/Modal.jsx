@@ -26,8 +26,8 @@ export class Modal extends Component {
     const image = this.props.image;
     return (
       <div className={css.Overlay} onClick={this.handleBackdropClick}>
-        <div className={css.Modal}>
-          <img src={image} alt="" />
+        <div>
+          <img className={css.Modal} src={image} alt="" />
         </div>
       </div>
     );
